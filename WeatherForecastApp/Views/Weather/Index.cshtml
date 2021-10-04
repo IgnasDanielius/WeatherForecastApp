@@ -1,0 +1,21 @@
+﻿@page
+@model WeatherForecastApp.Models.WeatherForecast
+@{
+}
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: <input type="text" name="City" />
+            <input type="submit" value="Search" class="btn btn-default" /> 
+        </p>
+    </div>
+</form>
+
+    <tr>
+        <td>
+            Temperature: @Html.DisplayFor(model => model.main.temp)°<br/>
+            Temp feels like: @Html.DisplayFor(model => model.main.feels_like)°<br />
+            Clouds: @Html.DisplayFor(model => model.clouds.all)<br />
+            Wind speed: @Html.DisplayFor(model => model.wind.speed) m/s
+        </td>
+    </tr>
